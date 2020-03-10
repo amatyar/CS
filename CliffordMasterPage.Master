@@ -1,0 +1,89 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CliffordMasterPage.master.cs" Inherits="CliffordSchool.CliffordMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Clifford H. Marshall Elementary School</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            height: 142px;
+        }
+        .style2
+        {
+            width: 166px;
+        }
+        .style3
+        {
+            width: 90px;
+        }
+        </style>
+
+
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table style="width:100%; height: 370px; margin-bottom:16px;">
+    <tr>
+        <td colspan="2" class="style1">
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/Clifford1.jpg" Height="185px" 
+                Width="1290px" />
+        </td>
+    </tr>
+    <tr>
+   <td class="style3">
+       <asp:Menu ID="Menu1" runat="server">
+           <Items>
+               <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/HomePage.aspx"></asp:MenuItem>
+               <asp:MenuItem Text="Login" Value="Login" NavigateUrl="~/Security/Log_In.aspx"></asp:MenuItem>
+               <asp:MenuItem Text="Registration" Value="Registration" 
+                   NavigateUrl="~/Security/Registration.aspx"></asp:MenuItem>
+               
+               <asp:MenuItem Text="Today's News" Value="Today's News" 
+                   NavigateUrl="~/Social/News.aspx"></asp:MenuItem>
+               <asp:MenuItem Text="About Clifford" Value="About Clifford"></asp:MenuItem>
+               <asp:MenuItem Text="Contact Us" Value="Contact Us" 
+                   NavigateUrl="~/Social/Contact.aspx"></asp:MenuItem>
+               <asp:MenuItem Text="Comments to Principal" Value="Comments to Principal" 
+                   NavigateUrl="~/Social/Contact.aspx">
+               </asp:MenuItem>
+               <asp:MenuItem Text="Feed Back" Value="Feed Back" 
+                   NavigateUrl="~/Social/FeedBack.aspx"></asp:MenuItem>
+               <asp:MenuItem Text="Donation to School" Value="Donation to School" 
+                   NavigateUrl="~/Social/Contact.aspx">
+               </asp:MenuItem>
+               
+           </Items>
+       </asp:Menu>
+   </td>
+   <td class="style2">
+   
+    
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+       &nbsp;</td>
+   </tr>
+    
+    </table>
+    </form>
+    <div align="center" style="font-size: 9pt; font-family : Verdana;">
+    <br />
+   <p><script type="text/javascript">
+          var d = new Date();
+          document.write(d);
+</script></p>
+
+<hr align="center" width="50%/" />
+<p>
+    Copyright @2013 Clifford H. Marshall Elementry School. All rights reserved<br />
+
+    </p>
+
+    </div>
+</body>
+</html>
